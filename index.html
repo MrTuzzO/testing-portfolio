@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bannerbg.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>TuzzO | Home</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <nav class="custom_nav navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">Tu<span>zz</span>O</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0 menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header end -->
+    <!-- color picker start -->
+    <div id="colorPicker">
+        <div class="setting_icon">
+            <div class="set_img"><img id="setting" src="img/setting_icon.png" alt="setting"></div>
+
+            <div class="custom_clrs">
+                <div onclick="colorOne()" class="w-clr color_1"></div>
+                <div onclick="colorTwo()" class="w-clr color_2"></div>
+                <div onclick="colorThree()" class="w-clr color_3"></div>
+                <div onclick="colorFour()" class="w-clr color_4 col-4"></div>
+                <div onclick="colorFive()" class="w-clr color_5 col-4"></div>
+                <div onclick="colorSix()" class="w-clr color_6 col-4"></div>
+                <label for="colorpicker" class="col-12">Pick your color</label>
+                <input class="col-12" onchange="colorByPicker()" id="colorpicker" type="color" value="#ffffff)">
+            </div>
+        </div>
+    </div>
+    <!-- color picker end -->
+    <!-- banner start -->
+    <section id="banner">
+        <div class="container-fluid banner_content cp_5 d-md-flex align-items-end">
+            <div class="banner_left col-md-6">
+                <div class="wrapper d-lg-flex align-items-center mt-5 mt-lg-0">
+                    <div class="static_text fs-3">Hi..I'm Khirul Islam.</div>
+                    <ul class="dynamic_texts fs-1 m-0 p-0 ps-lg-3">
+                        <li><span> Designer</span></li>
+                        <li><span>Developer</span></li>
+                        <li><span>Freelancer</span></li>
+                    </ul>
+                </div>
+                <h2 class="fs-1">Building Progressive <br> Web Apps for <br> businesses.
+                    <br><span>One at a Time.</span></h2>
+                <p class="fs-6">When users interact with your product, it should tell them an amazing story, driving
+                    your business
+                    forward. I can help you create that story. </p>
+                <a href="#" class="btn mb-4 contact_btn">Get In Touch</a>
+            </div>
+            <div class="banner_right col-md-6 col-sm-12">
+                <div class="neumorphism_design neumorphism_design_1">
+                    <div class="squre_box"></div>
+                    <div class="circle_box"></div>
+                </div>
+                <img src="img/banner.png" alt="Khirul Islam" class="banner_img">
+                <div class="canva"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner end -->
+    <!-- cursor -->
+    <div id="cursor" class="cursor"></div>
+    <div id="cursor2" class="cursor2"></div>
+    <!-- cursor -->
+    <!-- preloader -->
+    <div id="preloader"></div>
+    <!-- preloader -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

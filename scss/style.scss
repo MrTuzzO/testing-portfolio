@@ -1,0 +1,120 @@
+@import'reset';
+@import'common';
+@import'mixin';
+
+body {
+    scroll-behavior: smooth;
+    background: #e0e0e0;
+}
+
+// nav area styling
+.custom_nav {
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    .logo {
+        color: var(--primary-color);
+        font-size: 35px;
+        font-family: 'Monoton',
+            cursive;
+
+        span {
+            color: var(--primary-font-clr);
+        }
+    }
+}
+
+#banner {
+    .banner_left {
+        .wrapper{
+            .dynamic_texts{
+                height: 60px;
+                line-height: 60px;
+                overflow: hidden;
+                li{
+                    list-style: none;
+                    animation: slide 4.5s steps(3) infinite;
+                    position: relative;
+                    top: 0;
+                    @keyframes slide {
+                        100% {
+                            top: -180px;
+                        }
+                    }
+                    span{
+                        color: var(--primary-color);
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0,-50%);
+                            height: 100%;
+                            width: 100%;
+                            border-left: 3px solid var(--primary-color);
+                            animation: typing 1.5s steps(10) infinite;
+                            background: #e0e0e0;
+                        }
+                        @keyframes typing {
+                            100% {
+                                left: 100%;
+                                margin: 0 -35px 0 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h2 {
+            color: var(--primary-font-clr);
+
+            span {
+                color: var(--primary-color);
+            }
+        }
+
+        p {
+            color: var(--primary-font-clr);
+        }
+        a{
+            @include btn-sd;
+            &:hover{
+                @include btn_hover;
+            }
+        }
+    }
+
+    .banner_right {
+        // background: url(../img/banner_bg.png) no-repeat center;
+        background-size: contain;
+        position: relative;
+
+        img {
+            max-width: 400px;
+            max-height: 500px;
+            display: block;
+            margin: 0 auto;
+            transition: all .4s;
+            &:hover ~ .canva{
+                top: 7vh;
+                transform: translate(-48%, 0);
+            }
+            &:hover{
+                padding: 5px 5px 0 0;
+            }
+        }
+        
+        .canva{
+            height:450px;
+            width: 350px;
+            background: var(--primary-color);
+            position: absolute;
+            top: 8vh;
+            z-index: -1;
+            left: 50%;
+            transition: all 0.4s;
+            transform: translate(-50%, 0);
+            border-radius: 28% 56% 32% 37% / 37% 53% 26% 43%;
+            box-shadow: inset -10px 10px 60px rgba(0, 0, 0, 0.582);
+        }
+    }
+}

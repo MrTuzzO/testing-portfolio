@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+    --primary-color: #FFA980;
+    --primary-color-1: #9c4dc0;
+    --primary-color-2: #3eac75;
+    --primary-color-3: #7c66b9;
+    --primary-color-4: #bea335;
+    --primary-color-5: #64748b;
+    --primary-color-6: #f16220;
+    --primary-font-clr: #001f3f;
+}
+
+body {
+    font-family: 'Rubik',
+        sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+// cursor styling start
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: 0.1s;
+}
+.cursor2{
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: 0.13s;
+}
+// cursor styling end
+// preloader styling start
+#preloader{
+    background: #ddd url(../img/preloader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-size: 100px;
+}
+// preloader styling end
+.cp_5 {
+    padding: 0 1.5rem;
+}
+// custom design elements
+.neumorphism_design {
+    position: relative;
+    display: inline-block;
+}
+
+.squre_box {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 5px 5px 13px #bebebe,
+        -5px -5px 13px #ffffff;
+    z-index: -1;
+}
+.neumorphism_design_1 {
+    top: 15vh;
+    .circle_box {
+        left: 60px;
+        top: 60px;
+    }
+}
+
+.circle_box {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 150px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 7px 7px 13px #bebebe,
+        -7px -7px 13px #ffffff;
+    z-index: -2;
+}
+// custom design elements
+// color picker styling start
+#colorPicker {
+    position: fixed;
+    top: 85px;
+    right: 0px;
+    z-index: 22;
+
+    .setting_icon {
+        position: relative;
+
+        .set_img {
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+
+            img {
+                width: 40px;
+                height: 40px;
+                -webkit-animation: spin 7s linear infinite;
+                -moz-animation: spin 7s linear infinite;
+                animation: spin 7s linear infinite;
+                cursor: pointer;
+            }
+
+            @-moz-keyframes spin {
+                100% {
+                    -moz-transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes spin {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spin {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        .custom_clrs {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
+            position: absolute;
+            right: 0px;
+            padding: 8px 15px 8px 8px;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+            input[type="color"] {
+                -webkit-appearance: none;
+                cursor: pointer;
+                grid-column: 1/-1;
+                padding: 0;
+                border: 2px solid var(--primary-color);
+            }
+            label {
+                grid-column: 1/-1;
+                margin-bottom: -7px;
+                font-size: 13px;
+            }
+
+            .w-clr {
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+                border-radius: 30% 70% 57% 43% / 27% 57% 43% 73%;
+                transition: all 0.2s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            .color_1 {
+                background-color: var(--primary-color-1);
+            }
+
+            .color_2 {
+                background-color: var(--primary-color-2);
+            }
+
+            .color_3 {
+                background-color: var(--primary-color-3);
+            }
+
+            .color_4 {
+                background-color: var(--primary-color-4);
+            }
+
+            .color_5 {
+                background-color: var(--primary-color-5);
+            }
+
+            .color_6 {
+                background-color: var(--primary-color-6);
+            }
+        }
+    }
+}
+// color picker styling end
+@media (max-width:768px) {
+    #cursor,
+    #cursor2{
+        display: none;
+    }
+}
